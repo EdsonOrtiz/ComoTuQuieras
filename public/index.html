@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Project</title>
+    <title>M.Y. Project</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,18 +9,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets\style.css">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Lato|Roboto&display=swap" rel="stylesheet">
+    
     
     
 </head>
-<body id="myProject" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<body id="myProject" data-spy="scroll" data-target=".navbar" data-offset="50" >
     
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="getArtist">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
@@ -30,9 +30,8 @@
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#myProject">HOME</a></li>
-              <li><a href="#artists">ARTISTS</a></li>
-              <li><a href="#songs">SONGS</a></li>
-              <li><a href="#albums">ALBUMS</a></li>
+              <li><a href="#default">MUSIC</a></li>
+              <li><a href="#search">SEARCH</a></li>
               <li><a href="#">FAQ</a></li>      
             </ul>
               
@@ -45,7 +44,7 @@
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            
           </ol>
       
           <!-- Wrapper for slides -->
@@ -54,7 +53,7 @@
               <img src="\images\SpotifyForDevelopers1.png" alt="First Part" width="1200" height="700">
               <div class="carousel-caption">
                 
-                <p>I have created (with the help of my tutor) a wab page where anyone can find informaton of the artists that spotify has rovide us.</p>
+                <p>I have created (with the help of my tutor) a web page where anyone can find informaton of the artists that spotify has rovide us.</p>
               </div>      
             </div>
       
@@ -79,26 +78,26 @@
       </div>
       
       <!-- Container (The Band Section) -->
-      <div id="artists" class="container text-center">
-        <h3>ARTISTS</h3>
-        <p><em>We love music!</em></p>
+      <div id="default" class="container text-center">
+        <h3>MY PLAYLIST</h3>
+        <p><em>Hey! Those are my songs!</em></p>
         
         <br>
       </div>
       
       <!-- Container (TOUR Section) -->
-      <div id="songs" class="bg-1">
+      <div id="playlist" class="bg-1">
         <div class="container">
-          <h3 class="text-center">SONGS</h3>
-
+          <h3 class="text-center">YOUR PLAYLIST</h3>
+          <p class="text-center">Your music closer than you think.</p>
           
         </div>
       </div>
       
       <!-- Container (Contact Section) -->
-      <div id="albums" class="container">
-        <h3 class="text-center">ALBUMS</h3>
-        <p class="text-center"><em>We love our fans!</em></p>
+      <div id="search" class="container">
+        <h3 class="text-center">SEARCH</h3>
+        <p class="text-center"><em>Lookin' for something?</em></p>
         
 
       </div>
@@ -108,11 +107,13 @@
         <a class="up-arrow" href="#myProject" data-toggle="tooltip" title="TO TOP">
           <span class="glyphicon glyphicon-chevron-up"></span>
         </a><br><br>
-        <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+        <p>Don't have an account? Click the following link <a href="https://www.spotify.com" data-toggle="tooltip" target="_blank">www.spotify.com</a></p> 
       </footer>
 
 </body>
 </html>
 <script src="\javascripts\index.js"></script>
-<script src="\javascripts\app.js"></script>
+
+
+
 

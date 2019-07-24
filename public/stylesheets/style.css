@@ -11,16 +11,6 @@ h3, h4 {
 .container {
   padding: 80px 120px;
 }
-.person {
-  border: 10px solid transparent;
-  margin-bottom: 25px;
-  width: 80%;
-  height: 80%;
-  opacity: 0.7;
-}
-.person:hover {
-  border-color: #fff;
-}
 .carousel-inner img {
   -webkit-filter: grayscale(90%);
   filter: grayscale(90%); /* make all photos black and white */ 
@@ -44,6 +34,58 @@ h3, h4 {
 .list-group-item:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+.navbar {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand { 
+  color: #fff !important;
+}
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
+.navbar-nav li.active a {
+  color: #fff !important;
+  background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+  border-color:  transparent;
+}
+footer {
+  background-color: #2d2d30;
+  color: #f5f5f5;
+  padding: 32px;
+}
+footer a {
+  color: #f5f5f5;
+}
+footer a:hover {
+  color: #777;
+  text-decoration: none;
+}  
+
+/*
+.form-control {
+  border-radius: 0;
+}
+textarea {
+  resize: none;
+}
+.open .dropdown-toggle {
+  color: #fff;
+  background-color: #555 !important;
+}
+.dropdown-menu li a {
+  color: #000 !important;
+}
+.dropdown-menu li a:hover {
+  background-color: red !important;
 }
 .list-group-item:last-child {
   border-bottom-right-radius: 0;
@@ -87,54 +129,15 @@ h3, h4 {
   height: 400px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-}  
-.navbar {
-  font-family: Montserrat, sans-serif;
-  margin-bottom: 0;
-  background-color: #2d2d30;
-  border: 0;
-  font-size: 11px !important;
-  letter-spacing: 4px;
-  opacity: 0.9;
 }
-.navbar li a, .navbar .navbar-brand { 
-  color: #fff !important;
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  opacity: 0.7;
 }
-.navbar-nav li a:hover {
-  color: #fff !important;
+.person:hover {
+  border-color: #fff;
 }
-.navbar-nav li.active a {
-  color: #fff !important;
-  background-color: #29292c !important;
-}
-.navbar-default .navbar-toggle {
-  border-color:  transparent;
-}
-.open .dropdown-toggle {
-  color: #fff;
-  background-color: #555 !important;
-}
-.dropdown-menu li a {
-  color: #000 !important;
-}
-.dropdown-menu li a:hover {
-  background-color: red !important;
-}
-footer {
-  background-color: #2d2d30;
-  color: #f5f5f5;
-  padding: 32px;
-}
-footer a {
-  color: #f5f5f5;
-}
-footer a:hover {
-  color: #777;
-  text-decoration: none;
-}  
-.form-control {
-  border-radius: 0;
-}
-textarea {
-  resize: none;
-}
+*/
