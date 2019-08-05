@@ -45,38 +45,22 @@ axios.get('http://localhost:3000/api/getList').then(res=>{
           var album = res.data.info[i].track.album.name;
           //document.getElementById("album").innerHTML;
           
-          var artist = res.data.info[i].track.artists.name;
-          // var artist = res.data.info[i].track.artists.name;
-
-          for(var k = 0; k<res.data.info[i].track.artists.length; k++){
-            var artist = res.data.info[i].track.artists[k].name;
-            
-
-            
-            if(res.data.info[i].track.artists.length>1){
-             arts=artist+", "+artist;
-             k++;
-             console.log(arts)
+          for(k = 0; k<res.data.info[i].track.artists.length; k++){
+            // var artist=res.data.info[i].track.artists[k].name;
+            var artist= ""; 
+            while(k<res.data.info[i].track.artists.length){
+              artist+=res.data.info[i].track.artists[k].name+", ";
+              k++;
+              
+              
             }
-            else{
-              artist;
-              console.log(artist)
-            }
-            
-           
-
-      //console.log(title + " | " + artist + " | " + album)
-
-        } 
-      }
-})
-
-/*
-var artist = res.data.info[i].track.artists;
-var k, len, artName;
-for (k = 0, len = artist.length, artName = ""; k < len; k++) {
-  artName += artist[k]+". ";
-
-  console.log(artName)
-}
-*/
+            artist = artist.substring(0, artist.length - 2);
+            //console.log(artist);
+          }
+          
+          console.log(title+" | "+artist+" | "+album);
+         
+          //var songs = document.write("<tr><th>"+title+"</th><th>"+artist+"</th><th>"+album+"</th></tr>");
+          //document.getElementById("songs").innerHTML = songs;
+        }
+    })
