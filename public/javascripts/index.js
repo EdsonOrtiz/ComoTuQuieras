@@ -27,32 +27,56 @@ $(document).ready(function(){
   });
 });
 
+/*
+$(document).ready(function() {
+  $('#play1').DataTable();
+  $('#play2').DataTable();
+  $('#play3').DataTable();
+  $('#play4').DataTable();
+} );
 
-//First, instantiate the wrapper.
-var SpotifyWebApi = require('spotify-web-api-node');
+*/
+axios.get('http://localhost:3000/api/getList').then(res=>{
+        
+        for(let i=0;i<res.data.info.length;i++){
+          var title = res.data.info[i].track.name;
+          //document.getElementById("title").innerHTML;
 
-// credentials are optional
-var spotifyApi = new SpotifyWebApi({
-  clientId: '62ab6ef97837443b9d88d8e267c458ee',
-  clientSecret: '14ea3a1ff18e4840a3808abb824c4797',
-  redirectUri: 'http://localhost:8888'
-});
-spotifyApi.setAccessToken('BQCzNxa321vYCIc36Y8_CY_idGddKZ7cHynE8q4CN3pww6wgUplBzC6j8QVSG2tAZKJjq5pjpCyBUVPFPjmhBp');
+          var album = res.data.info[i].track.album.name;
+          //document.getElementById("album").innerHTML;
+          
+          var artist = res.data.info[i].track.artists.name;
+          // var artist = res.data.info[i].track.artists.name;
 
-api
-  .getPlaylistTracks('7LPpNcFdgEPXPBeWpiyWVo', {
-    offset: 25,
-    limit: 100,
-    fields: 'items'
-  })
-  .then(
-    function(data) {
-      console.log('The playlist contains these tracks', data.body);
-    },
-    function(err) {
-      console.log('Something went wrong!', err);
-    }
-  );
+          for(var k = 0; k<res.data.info[i].track.artists.length; k++){
+            var artist = res.data.info[i].track.artists[k].name;
+            
 
+            
+            if(res.data.info[i].track.artists.length>1){
+             arts=artist+", "+artist;
+             k++;
+             console.log(arts)
+            }
+            else{
+              artist;
+              console.log(artist)
+            }
+            
+           
 
+      //console.log(title + " | " + artist + " | " + album)
 
+        } 
+      }
+})
+
+/*
+var artist = res.data.info[i].track.artists;
+var k, len, artName;
+for (k = 0, len = artist.length, artName = ""; k < len; k++) {
+  artName += artist[k]+". ";
+
+  console.log(artName)
+}
+*/

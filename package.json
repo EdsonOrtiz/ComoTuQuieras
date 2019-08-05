@@ -6,10 +6,14 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "cookie-parser": "~1.4.4",
+    "datatables.net-buttons-dt": "^1.5.6",
+    "datatables.net-dt": "^1.10.19",
+    "datatables.net-fixedheader-dt": "^3.1.5",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.16.4",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",

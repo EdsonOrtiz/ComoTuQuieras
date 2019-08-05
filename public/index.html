@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>M.Y. Project</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>M.Y. Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Lato|Roboto&display=swap" rel="stylesheet">
+   <!-- 
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheets\style.css">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Lato|Roboto&display=swap" rel="stylesheet">
-    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+      
+
+    </script>
+
+  <link rel="stylesheet" type="text/css" href="stylesheets\style.css">
     
     
 </head>
@@ -20,17 +32,17 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="getArtist">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="#myProject">M.Y. Project</a>
+            <a class="navbar-brand" href="#">M.Y. Project</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#myProject">HOME</a></li>
-              <li><a href="#default">MUSIC</a></li>
+              <li><a href="#playlist">MUSIC</a></li>
               <li><a href="#search">SEARCH</a></li>
               <li><a href="#">FAQ</a></li>      
             </ul>
@@ -77,28 +89,150 @@
           </a>
       </div>
       
-      <!-- Container (The Band Section) -->
-      <div id="default" class="container text-center">
-        <h3>MY PLAYLIST</h3>
-        <p><em>Hey! Those are my songs!</em></p>
-        
-        <br>
+      <!-- Container (My Playlist Section) -->
+      <div id="playlist" class="bg-2">
+        <div class="container">
+          <h3 class="text-center">MY PLAYLIST</h3>
+          <p class="text-center"><em>Hey! Those are my songs!</em></p>
+          <br>
+          <table id="play1" class="table table-hover">
+            <thead>
+                <th scope="col"> </th>
+              <th>TITLE</th>
+              <th>ARTIST</th>
+              <th>ALBUM</th>
+            </thead>
+            <tbody>
+              <td>
+                <th class="title"></th>
+                <th class="artist"></th>
+                <th class="album"></th>
+              </td>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="col"> </th>
+                <th>TITLE</th>
+                <th>ARTIST</th>
+                <th>ALBUM</th>
+              </tr>
+            </tfoot>
+          
+        </table>
+
+
+
+
+
+
+        <!--
+        <iframe src="https://open.spotify.com/embed/playlist/7LPpNcFdgEPXPBeWpiyWVo" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="center responsive"></iframe>
+        -->  
+      </div>
       </div>
       
-      <!-- Container (TOUR Section) -->
-      <div id="playlist" class="bg-1">
+      <!-- Container (Our Playlist Section Section) -->
+      <div class="bg-1">
         <div class="container">
-          <h3 class="text-center">YOUR PLAYLIST</h3>
-          <p class="text-center">Your music closer than you think.</p>
+          <h3 class="text-center">OUR PLAYLIST</h3>
+          <p class="text-center"><em> Choose your next mood.</em></p>
+          <br>
           
+          <ul class="nav nav-tabs">
+              <li class="active tabstyle"><a  data-toggle="tab" href="#home">Me & My Lonely Times</a></li>
+              <li class="tabstyle"><a  data-toggle="tab" href="#menu1">Discover Weekly</a></li>
+              <li class="tabstyle"><a data-toggle="tab" href="#menu2">Today's Top Hits</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active">
+                <br>
+                <h3 class="text-center">Me & My Lonely Times</h3>
+                <table id="play2" class="table table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col"> </th>
+                      <th>TITLE</th>
+                      <th>ARTIST</th>
+                      <th>ALBUM</th>
+                    </tr>
+                  </thead>
+
+                  <tfoot>
+                    <tr>
+                      <th scope="col"> </th>
+                      <th>TITLE</th>
+                      <th>ARTIST</th>
+                      <th>ALBUM</th>
+                    </tr>
+                  </tfoot>
+
+                  </table>
+                  <!--
+                  <iframe src="https://open.spotify.com/embed/playlist/4MzUktREkMJJsXGn9mFKqi" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="center"></iframe>
+                    -->
+              </div>
+
+              <div id="menu1" class="tab-pane fade">
+                  <br>
+                <h3 class="text-center">Discover Weekly</h3>
+                <table id="play3" class="table table-hover table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col"> </th>
+                      <th>TITLE</th>
+                      <th>ARTIST</th>
+                      <th>ALBUM</th>
+                    </tr>
+                  </thead>
+                  
+                  <tfoot>
+                    <tr>
+                      <th scope="col"> </th>
+                      <th>TITLE</th>
+                      <th>ARTIST</th>
+                      <th>ALBUM</th>
+                    </tr>
+                  </tfoot>
+
+                  </table>
+                  <!--
+                  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXcSrEtYz0h9Zz" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="center"></iframe>
+                -->
+              </div>
+              
+              <div id="menu2" class="tab-pane fade">
+                  <br>
+                <h3 class="text-center">Today's Top Hits</h3>
+                <table id="play4" class="table table-hover table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col"> </th>
+                        <th>TITLE</th>
+                        <th>ARTIST</th>
+                        <th>ALBUM</th>
+                      </tr>
+                    </thead>
+                  
+                    <tfoot>
+                      <tr>
+                        <th scope="col"> </th>
+                        <th>TITLE</th>
+                        <th>ARTIST</th>
+                        <th>ALBUM</th>
+                      </tr>
+                    </tfoot>
+  
+                    </table>
+                <!--
+                  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="center"></iframe>
+                -->
+              </div>
+            </div>
+
         </div>
       </div>
-      
-      <!-- Container (Contact Section) -->
-      <div id="search" class="container">
-        <h3 class="text-center">SEARCH</h3>
-        <p class="text-center"><em>Lookin' for something?</em></p>
-        
+
 
       </div>
         
@@ -107,13 +241,10 @@
         <a class="up-arrow" href="#myProject" data-toggle="tooltip" title="TO TOP">
           <span class="glyphicon glyphicon-chevron-up"></span>
         </a><br><br>
-        <p>Don't have an account? Click the following link <a href="https://www.spotify.com" data-toggle="tooltip" target="_blank">www.spotify.com</a></p> 
+        <p>Don't have an account yet? Sing up here <a href="https://www.spotify.com" data-toggle="tooltip" target="_blank">www.spotify.com</a></p> 
       </footer>
 
 </body>
 </html>
 <script src="\javascripts\index.js"></script>
-
-
-
 
