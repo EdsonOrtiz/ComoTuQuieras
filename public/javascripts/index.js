@@ -30,37 +30,35 @@ $(document).ready(function(){
 /*
 $(document).ready(function() {
   $('#play1').DataTable();
-  $('#play2').DataTable();
-  $('#play3').DataTable();
-  $('#play4').DataTable();
+   $('#play2').DataTable();
+   $('#play3').DataTable();
+   $('#play4').DataTable();
 } );
-
 */
+
 axios.get('http://localhost:3000/api/getList').then(res=>{
-        
+
         for(let i=0;i<res.data.info.length;i++){
           var title = res.data.info[i].track.name;
-          //document.getElementById("title").innerHTML;
-
-          var album = res.data.info[i].track.album.name;
-          //document.getElementById("album").innerHTML;
+          var album = res.data.info[i].track.album.name;   
           
           for(k = 0; k<res.data.info[i].track.artists.length; k++){
-            // var artist=res.data.info[i].track.artists[k].name;
+         
             var artist= ""; 
             while(k<res.data.info[i].track.artists.length){
+              
               artist+=res.data.info[i].track.artists[k].name+", ";
               k++;
-              
-              
             }
-            artist = artist.substring(0, artist.length - 2);
-            //console.log(artist);
+            artist = artist.substring(0, artist.length - 2);           
           }
-          
+
+          var list = document.createElement('tr')
+          list.innerHTML= "<td>"+title+"</td><td>"+artist+"</td><td>"+album+"</td>";
+          document.getElementById('songs').appendChild(list);
           console.log(title+" | "+artist+" | "+album);
-         
-          //var songs = document.write("<tr><th>"+title+"</th><th>"+artist+"</th><th>"+album+"</th></tr>");
-          //document.getElementById("songs").innerHTML = songs;
-        }
+        }       
     })
+
+
+    

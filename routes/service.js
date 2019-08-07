@@ -17,9 +17,12 @@ module.exports.getListSpotify = async function(){
   var spotifyApi = new SpotifyWebApi({
     clientId: '62ab6ef97837443b9d88d8e267c458ee',
     clientSecret: '14ea3a1ff18e4840a3808abb824c4797',
-    redirectUri: 'http://localhost:8888'
+    redirectUri: 'https://api.spotify.com/v1/7LPpNcFdgEPXPBeWpiyWVo/{playlist_id}/tracks'
   });
-  spotifyApi.setAccessToken('BQDI40xoFZqV93gqb9HRVr_nUDugFdznNE-m-TPV4HoZGF09m9kkRWef-qbFEJLtSd0SmKWMWOzK2_wYt6PY9km3l9UXvxBAmdmPLlOD61PdUwQPSlYt95-Mj0tcXPEZ3ky4WiO_aL4kLcGZfeRzAIx709h3_w');
+
+  //console.log(spotifyApi);
+
+  spotifyApi.setAccessToken('BQBd2N3hfUjkyi4GxM6LA-IEUhB3mnC7YUt2fGzhL41-acfJv8_NL9GTZoACRjqjFXE4E3R8fy4A0ZNEVUw56hGgSIe3FwvoY4SXT-jysopSDIKkcysoWXyWnzzegylPDxxBOX7G2JLxBiClp9hvSNoiQ0Zbog');
 
  var promise = new Promise((resolve, reject)=>{
     spotifyApi.getPlaylistTracks('7LPpNcFdgEPXPBeWpiyWVo', {
@@ -39,3 +42,6 @@ module.exports.getListSpotify = async function(){
 return promise;
 
     }
+
+
+this.getListSpotify();
