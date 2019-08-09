@@ -7,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Lato|Roboto&display=swap" rel="stylesheet">
-   <!-- 
+   
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-  -->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -90,25 +90,24 @@
       </div>
       
       <!-- Container (My Playlist Section) -->
-      <div id="playlist" class="bg-2">
+      <div id="playlist" class="bg-1">
         <div class="container">
           <h3 class="text-center">MY PLAYLIST</h3>
           <p class="text-center"><em>Hey! Those are my songs!</em></p>
           <br>
           <table id="play1" class="table table-hover">
             <thead>
-              <th>TITLE</th>
-              <th>ARTIST</th>
-              <th>ALBUM</th>
+              <td>TITLE</td>
+              <td>ARTIST</td>
+              <td>ALBUM</td>
+              <td><span class="glyphicon glyphicon-calendar"></span></td>
             </thead>
-            <tbody id="songs">
-            </tbody>
-              
-            
+            <tbody id="tracklist1"></tbody>
             <tfoot>
-                <th>TITLE</th>
-                <th>ARTIST</th>
-                <th>ALBUM</th>
+                <td>TITLE</td>
+                <td>ARTIST</td>
+                <td>ALBUM</td>
+                <td class="glyphicon glyphicon-calendar"></td>
             </tfoot>
           
         </table>
@@ -127,7 +126,7 @@
       <!-- Container (Our Playlist Section Section) -->
       <div class="bg-1">
         <div class="container">
-          <h3 class="text-center">OUR PLAYLIST</h3>
+          <h3 class="text-center">MUSIC FOR EVERYONE</h3>
           <p class="text-center"><em> Choose your next mood.</em></p>
           <br>
           
@@ -141,24 +140,22 @@
               <div id="home" class="tab-pane fade in active">
                 <br>
                 <h3 class="text-center">Me & My Lonely Times</h3>
-                <table id="play2" class="table table-dark">
+                <table id="play2" class="table table-hover">
                   <thead>
-                    <tr>
-                      <th scope="col"> </th>
-                      <th>TITLE</th>
-                      <th>ARTIST</th>
-                      <th>ALBUM</th>
-                    </tr>
+                    <th>TITLE</th>
+                    <th>ARTIST</th>
+                    <th>ALBUM</th>
+                    <th><span class="glyphicon glyphicon-calendar"></span></th>
                   </thead>
+                  <tbody id="tracklist2">
+                  </tbody>
+                    
                   
-
                   <tfoot>
-                    <tr>
-                      <th scope="col"> </th>
                       <th>TITLE</th>
                       <th>ARTIST</th>
                       <th>ALBUM</th>
-                    </tr>
+                      <th class="glyphicon glyphicon-calendar"></th>
                   </tfoot>
 
                   </table>
@@ -170,23 +167,22 @@
               <div id="menu1" class="tab-pane fade">
                   <br>
                 <h3 class="text-center">Discover Weekly</h3>
-                <table id="play3" class="table table-hover table-dark">
+                <table id="play3" class="table table-hover">
                   <thead>
-                    <tr>
-                      <th scope="col"> </th>
-                      <th>TITLE</th>
-                      <th>ARTIST</th>
-                      <th>ALBUM</th>
-                    </tr>
+                    <th>TITLE</th>
+                    <th>ARTIST</th>
+                    <th>ALBUM</th>
+                    <th class="glyphicon glyphicon-calendar"></th>
                   </thead>
+                  <tbody id="tracklist3">
+                  </tbody>
+                    
                   
                   <tfoot>
-                    <tr>
-                      <th scope="col"> </th>
                       <th>TITLE</th>
                       <th>ARTIST</th>
                       <th>ALBUM</th>
-                    </tr>
+                      <th class="glyphicon glyphicon-calendar"></th>
                   </tfoot>
 
                   </table>
@@ -198,24 +194,23 @@
               <div id="menu2" class="tab-pane fade">
                   <br>
                 <h3 class="text-center">Today's Top Hits</h3>
-                <table id="play4" class="table table-hover table-dark">
-                    <thead>
-                      <tr>
-                        <th scope="col"> </th>
-                        <th>TITLE</th>
-                        <th>ARTIST</th>
-                        <th>ALBUM</th>
-                      </tr>
-                    </thead>
+                <table id="play4" class="table table-hover">
+                  <thead>
+                    <th>TITLE</th>
+                    <th>ARTIST</th>
+                    <th>ALBUM</th>
+                    <th><span class="glyphicon glyphicon-calendar"></span></th>
+                  </thead>
+                  <tbody id="tracklist4">
+                  </tbody>
+                    
                   
-                    <tfoot>
-                      <tr>
-                        <th scope="col"> </th>
-                        <th>TITLE</th>
-                        <th>ARTIST</th>
-                        <th>ALBUM</th>
-                      </tr>
-                    </tfoot>
+                  <tfoot>
+                      <th>TITLE</th>
+                      <th>ARTIST</th>
+                      <th>ALBUM</th>
+                      <th class="glyphicon glyphicon-calendar"></th>
+                  </tfoot>
   
                     </table>
                 <!--

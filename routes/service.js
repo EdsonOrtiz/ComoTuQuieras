@@ -12,36 +12,89 @@ function handleTokenAPI(){
 }
 */
 
-module.exports.getListSpotify = async function(){
+module.exports.getListSpotify =  function(){
   
-  var spotifyApi = new SpotifyWebApi({
+  const spotifyApi = new SpotifyWebApi({
     clientId: '62ab6ef97837443b9d88d8e267c458ee',
     clientSecret: '14ea3a1ff18e4840a3808abb824c4797',
-    redirectUri: 'https://api.spotify.com/v1/7LPpNcFdgEPXPBeWpiyWVo/{playlist_id}/tracks'
+    
   });
+  spotifyApi.setAccessToken('BQD42OOxJd0oAVPHRLNFo8h-MT9NRwo19cSAQK8r_FNVotJc8OlLAJndmMCNBkmojI87e10HVPLwX8oAE6dSJ52c97TP94yUS4pIm-aX_ftbOpNMnsvE0mpWQprpAOXhRE47mfkCegJghkzLkd0ljhBDzRp6PA');
 
+  return spotifyApi
+}
   //console.log(spotifyApi);
 
-  spotifyApi.setAccessToken('BQBd2N3hfUjkyi4GxM6LA-IEUhB3mnC7YUt2fGzhL41-acfJv8_NL9GTZoACRjqjFXE4E3R8fy4A0ZNEVUw56hGgSIe3FwvoY4SXT-jysopSDIKkcysoWXyWnzzegylPDxxBOX7G2JLxBiClp9hvSNoiQ0Zbog');
 
- var promise = new Promise((resolve, reject)=>{
-    spotifyApi.getPlaylistTracks('7LPpNcFdgEPXPBeWpiyWVo', {
-      fields: 'items(track(name,album(name),artists(name)))'
+  //Newbies
   
+  module.exports.playlist1= async function(){
+    let spotifyApi = this.getListSpotify()
+    return new Promise((resolve, reject)=>{
+      spotifyApi.getPlaylistTracks('7LPpNcFdgEPXPBeWpiyWVo', {
+        fields: 'items(added_at,track(name,album(name),artists(name)))'
+      })
+      .then(
+        function(data) {
+            resolve( data.body.items)
+        },
+        function(err) {
+          reject(err)
+        }
+      );
     })
-    .then(
-      function(data) {
-         resolve( data.body.items)
-      },
-      function(err) {
-        reject(err)
-      }
-    );
-  })
-
-return promise;
-
     }
 
+  //Me & My Lonely Times
+  module.exports.playlist2= async function (){
+    let spotifyApi = this.getListSpotify()
+    return new Promise((resolve, reject)=>{
+      spotifyApi.getPlaylistTracks('4MzUktREkMJJsXGn9mFKqi', {
+        fields: 'items(added_at,track(name,album(name),artists(name)))'
+      })
+      .then(
+        function(data) {
+            resolve( data.body.items)
+        },
+        function(err) {
+          reject(err)
+        }
+      );
+    })
+    }
 
-this.getListSpotify();
+  //Discover Weekly
+  module.exports.playlist3= async function (){
+    let spotifyApi = this.getListSpotify()
+    return new Promise((resolve, reject)=>{
+      spotifyApi.getPlaylistTracks('37i9dQZEVXcSrEtYz0h9Zz', {
+        fields: 'items(added_at,track(name,album(name),artists(name)))'
+      })
+      .then(
+        function(data) {
+            resolve( data.body.items)
+        },
+        function(err) {
+          reject(err)
+        }
+      );
+    })
+    }
+
+  //Todays Top Hits
+  module.exports.playlist4= async function (){
+    let spotifyApi = this.getListSpotify()
+    return new Promise((resolve, reject)=>{
+      spotifyApi.getPlaylistTracks('37i9dQZF1DXcBWIGoYBM5M', {
+        fields: 'items(added_at,track(name,album(name),artists(name)))'
+      })
+      .then(
+        function(data) {
+            resolve( data.body.items)
+        },
+        function(err) {
+          reject(err)
+        }
+      );
+    })
+    }
